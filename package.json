@@ -1,0 +1,17 @@
+{
+  "name": "static-analysis-testing-js-apps",
+  "version": "1.0.0",
+  "author": "Franco Di Leo (https://francodileo.vercel.app)",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build" : "babel src --out-dir dist"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11"
+  }
+}
