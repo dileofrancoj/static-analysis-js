@@ -5,13 +5,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build" : "babel src --out-dir dist"
+    "build": "babel src --out-dir dist"
   },
   "keywords": [],
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11"
+    "@babel/preset-env": "^7.16.11",
+    "eslint": "^8.13.0"
   }
 }
