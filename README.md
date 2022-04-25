@@ -122,3 +122,29 @@ El --ignore-path .gitignore le indica al linter que no debe tener en cuenta a la
 ## Prettier
 
 Prettier es un formateador automático de código. Si queres saber más podes ir a su <a href="https://github.com/dileofrancoj/static-analysis-js">sitio web</a>
+
+Toda la configuración de prettier se puede generar de su sitio oficial en su <a href="https://prettier.io/playground/">Playground</a>
+
+En la raíz creamos el archivo: .prettierc
+
+```json
+{
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "jsxSingleQuote": true,
+  "printWidth": 80,
+  "proseWrap": "preserve",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "vueIndentScriptAndStyle": false
+}
+```
