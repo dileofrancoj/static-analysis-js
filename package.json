@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist"
+    "build": "babel src --out-dir dist",
+    "lint": "eslint --ignore-path .gitignore",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\""
   },
   "keywords": [],
   "license": "ISC",
@@ -13,6 +15,7 @@
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
-    "eslint": "^8.13.0"
+    "eslint": "^8.13.0",
+    "prettier": "^2.6.2"
   }
 }
