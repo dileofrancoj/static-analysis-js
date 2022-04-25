@@ -56,3 +56,36 @@ ESLint es una herramienta de código abierto enfocada en el proceso de "lintig" 
 ```bash
 npm i -D eslint
 ```
+
+Para correr este comando debemos ejecutar:
+
+```bash
+npx eslint .
+```
+
+### Creación del .eslintrc (configuration file)
+
+Si ejecutamos npx eslint . vemos que nos va a tirar error de constantes y esto sucede porque no tenemos ninguna configuración en el .eslintrc
+
+```javascript
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "strict": ["error", "never"],
+    "valid-typeof": "error",
+    "no-unsafe-negation": "error",
+    "no-unused-vars": "error",
+    "no-unexpected-multiline": "error",
+    "no-undef": "error"
+  },
+  "env": {
+    "browser": true // console, navigator, etc
+  }
+}
+```
