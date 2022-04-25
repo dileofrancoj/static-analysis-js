@@ -148,3 +148,32 @@ En la raíz creamos el archivo: .prettierc
   "vueIndentScriptAndStyle": false
 }
 ```
+
+Si agregamos a nuestro package.json el script format:
+
+```json
+"format": "npm run prettier -- --write",
+```
+
+y corremos:
+
+```shell
+npm run format
+```
+
+La configuración será tomada del .prettierc
+
+Una vez configurado todo esto, si vamos a nuestro ejemplo y agregamos un ; extra, estariamos inclumpliendo la regla (no-extra-semi) y eso podemos desactivarlo desde el eslintrc agregando el siguiente elemento a rules:
+
+```json
+"rules": {
+  "strict": ["error", "never"],
+  "no-extra-semi": "off" // here
+}
+```
+
+Para no repetir esto con cada regla que existe, podemos instalar eslint-config-prettier
+
+```bash
+npm install --save-dev eslint-config-prettier
+```
