@@ -118,3 +118,7 @@ Y dentro del <b>package.json</b> puede agregarse como script:
 ```
 
 El --ignore-path .gitignore le indica al linter que no debe tener en cuenta a la hora de aplicar las reglas los archivos que están dentro del .gitignore
+
+## Prettier
+
+Prettier es un formateador automático de código. Si queres saber más podes ir a su <a href="https://github.com/dileofrancoj/static-analysis-js">sitio web</a>
