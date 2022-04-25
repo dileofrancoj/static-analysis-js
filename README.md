@@ -51,7 +51,7 @@ stuff
 
 ## Instalación de eslint
 
-ESLint es una herramienta de código abierto enfocada en el proceso de "lintig" para javascript (o más correctamente para ECMAScript). ESLint es la herramienta predominante para la tarea de "limpiar" código javascript tanto en el servidor (node.js) como en el navegador.
+ESLint es una herramienta de código abierto enfocada en el proceso de "lintig" para javascript (o más correctamente para ECMAScript). ESLint es la herramienta predominante para la tarea de "limpiar" código javascript tanto en el servidor (node.js) como en el navegador. Si queres conocer más sobre eslint podes ir a su <a href="https://eslint.org/"> sitio web </a>
 
 ```bash
 npm i -D eslint
