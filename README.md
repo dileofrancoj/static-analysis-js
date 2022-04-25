@@ -89,3 +89,32 @@ Si ejecutamos npx eslint . vemos que nos va a tirar error de constantes y esto s
   }
 }
 ```
+
+ESLint tiene muchisimas reglas que pueden configurarse para su proyecto. Para esto, se puede usar la extensión / herencia.
+
+```javascript
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended"],
+  "rules": {
+    "strict": ["error", "never"]
+  },
+  "env": {
+    "browser": true
+  }
+}
+```
+
+Y dentro del <b>package.json</b> puede agregarse como script:
+
+```json
+"lint": "eslint --ignore-path .gitignore ."
+```
+
+El --ignore-path .gitignore le indica al linter que no debe tener en cuenta a la hora de aplicar las reglas los archivos que están dentro del .gitignore
