@@ -1,3 +1,5 @@
+La idea de este README es seguir paso a paso el proceso para crear un proyecto desde 0 con las reglas de lintern y de code-fixing necesarios para garantizar el orden y el trabajo colaborativo.
+
 # Lista de pasos para static analysis and testing javascript applications
 
 ## Creación del proyecto
