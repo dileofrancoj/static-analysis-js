@@ -177,3 +177,30 @@ Para no repetir esto con cada regla que existe, podemos instalar eslint-config-p
 ```bash
 npm install --save-dev eslint-config-prettier
 ```
+
+```json
+"extends": ["eslint:recommended", "eslint-config-prettier"]
+```
+
+### Validar que todos los files estén correctamente formateados
+
+```json
+"scripts": {
+  "build": "babel src --out-dir dist",
+  "lint": "eslint --ignore-path .gitignore",
+  "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+  "format": "npm run prettier -- --write",
+  "validate": "npm run format && npm run lint && npm run build"
+}
+```
+
+## Husky
+
+La descripción oficial de husky es algo así como:
+Husky improves your commits and more 🐶 woof!
+
+```
+jajajja
+```
+
+Para que tengas más información acerca de esta asombrosa herramienta te dejo su <a href="https://github.com/typicode/husky"> documentación</a>
