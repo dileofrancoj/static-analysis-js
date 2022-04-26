@@ -219,3 +219,22 @@ npx husky add .husky/pre-commit "npm run validate"
 ## Commitlint
 
 Para activar commits semánticos dentro de tu proyecto, no dudes en usar commitlint como herramienta. Si queres más información te dejo su [página oficial](https://github.com/conventional-changelog/commitlint)
+
+### Instalación
+
+```bash
+npm install --save-dev @commitlint/config-conventional @commitlint/cli
+```
+
+### Agregar husky a tus hooks
+
+```bash
+npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
+```
+
+### Crear commitlint.config.js
+
+```javascript
+// eslint-disable-next-line no-undef
+module.exports = { extends: ['@commitlint/config-conventional'] }
+```
