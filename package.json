@@ -10,7 +10,8 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
-    "validate": "npm run format && npm run lint && npm run build"
+    "validate": "npm run format && npm run lint",
+    "prepare": "husky install"
   },
   "keywords": [],
   "license": "ISC",
@@ -20,6 +21,7 @@
     "@babel/preset-env": "^7.16.11",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
     "prettier": "^2.6.2"
   }
 }
