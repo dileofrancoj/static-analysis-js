@@ -77,7 +77,7 @@ Si ejecutamos npx eslint . vemos que nos va a tirar error de constantes y esto s
     }
   },
   "rules": {
-    "strict": ["error", "never"],
+    "strict": ["error", "never"] // not allow to use use strict in code,
     "valid-typeof": "error",
     "no-unsafe-negation": "error",
     "no-unused-vars": "error",
@@ -221,6 +221,8 @@ npx husky add .husky/pre-commit "npm run validate"
 Para activar commits semánticos dentro de tu proyecto, no dudes en usar commitlint como herramienta. Si queres más información te dejo su [página oficial](https://github.com/conventional-changelog/commitlint)
 
 ### Instalación
+
+asd
 
 ```bash
 npm install --save-dev @commitlint/config-conventional @commitlint/cli
