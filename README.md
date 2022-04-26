@@ -190,7 +190,8 @@ npm install --save-dev eslint-config-prettier
   "lint": "eslint --ignore-path .gitignore",
   "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
   "format": "npm run prettier -- --write",
-  "validate": "npm run format && npm run lint && npm run build"
+  "check-format": "npm run prettier -- --list-different",
+  "validate": "npm run format && npm run lint"
 }
 ```
 
@@ -204,3 +205,13 @@ jajajja
 ```
 
 Para que tengas más información acerca de esta asombrosa herramienta te dejo su <a href="https://github.com/typicode/husky"> documentación</a>
+
+### Instalación
+
+```bash
+npm install husky --save-dev
+npx husky install
+npm set-script prepare "husky install"
+npx husky add .husky/pre-commit "npm run check-format"
+npx husky add .husky/pre-commit "npm run validate"
+```
