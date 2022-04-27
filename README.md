@@ -342,3 +342,13 @@ Finalmente, agregnado los tests a husky, el package.json debería quedar de la s
     "prepare": "husky install"
   },
 ```
+
+PD: Para que no haya error de lintern a la hora de trabajar sobre los archivos .test.js, debemos definir en la configuración de eslint (env) -> jest:true
+
+```javascript
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
+```
