@@ -6,11 +6,12 @@
       "jsx": true
     }
   },
-  "extends": ["eslint:recommended","eslint-config-prettier"],
+  "extends": ["eslint:recommended", "eslint-config-prettier"],
   "rules": {
     "strict": ["error", "never"]
   },
   "env": {
-    "browser": true
+    "browser": true,
+    "node": true
   }
 }

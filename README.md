@@ -257,3 +257,87 @@ Modificación del package.json
 ```javascript
 "validate" : "npm-run-all --parallel check-format format lint"
 ```
+
+## Jest
+
+```bash
+npm i -D jest
+npm install -D jest-environment-jsdom
+```
+
+En nuestro package.json
+
+```javascript
+"test":"jest"
+```
+
+### Crear nuestros test file src/**tests**
+
+```javascript
+test('works', () => {})
+```
+
+Una vez hecho esto, se puede agregar al script de validate para que corra con husky:
+
+```javascript
+"validate" : "npm run lint && npm run test .."
+```
+
+### Modules con Babel en Jest
+
+Hay que tener en cuenta que Jest corre en Node y Node de por si no soporta los imports statments.
+
+Creamos un exampleFn.js
+
+```javascript
+export const greetingFn = () => {
+  return 'hi'
+}
+```
+
+Y creamos un exampleFn.test.js
+
+```javascript
+import { greetingFn } from '../exampleFn'
+test('fn works', () => {
+  const f = greetingFn()
+  expect(f).toBe('hi')
+})
+```
+
+Algo muy interesante que tiene jest es la simulación de un entorno browser dentro de los files de test (gracias a sus global objects) Para esto, debemos usar js-dom
+
+<b>jest.config.js</b>
+
+```javascript
+module.exports = {
+  testEnvironment: 'jest-environment-jsdom" // corra emulando al browser
+}
+```
+
+Todos los parametros de configuración que querramos agregar podemos definirlos en el jest.config.js
+
+```javascript
+module.exports = {
+  bail: 1,
+  verbose: true,
+  testEnvironment: 'jest-environment-jsdom',
+}
+```
+
+Te dejo un link a la [documentacion](https://jestjs.io/docs/configuration) para que veas todo lo que podes agregar.
+
+Finalmente, agregnado los tests a husky, el package.json debería quedar de la siguiente forma:
+
+```json
+  "scripts": {
+    "test": "jest --config --coverage",
+    "build": "babel src --out-dir dist",
+    "lint": "eslint --ignore-path .gitignore",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "validate": "npm run format && npm run lint && npm run test",
+    "prepare": "husky install"
+  },
+```

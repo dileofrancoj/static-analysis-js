@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "jest --config --coverage",
     "build": "babel src --out-dir dist",
     "lint": "eslint --ignore-path .gitignore",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
@@ -24,6 +25,8 @@
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^7.0.4",
+    "jest": "^28.0.2",
+    "jest-environment-jsdom": "^28.0.2",
     "prettier": "^2.6.2"
   }
 }

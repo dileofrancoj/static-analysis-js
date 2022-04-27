@@ -7,3 +7,7 @@ if (!('serviceWorker' in navigator)) {
 
 const greetingPeya = 'hi peya'
 console.log(`${greetingPeya} viewers`)
+
+export const fn = () => {
+  return "hola"
+}
