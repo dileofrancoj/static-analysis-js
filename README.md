@@ -154,6 +154,7 @@ En la raíz creamos el archivo: .prettierc
 Si agregamos a nuestro package.json el script format:
 
 ```json
+"prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\"",
 "format": "npm run prettier -- --write",
 ```
 
@@ -241,4 +242,18 @@ npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 ```javascript
 // eslint-disable-next-line no-undef
 module.exports = { extends: ['@commitlint/config-conventional'] }
+```
+
+## npm run all
+
+Esta es una herramienta para correr multiples scripts en paralelo. Permite ahorrar tiempo en la ejecución de comandos.
+
+```bash
+npm i -D npm-run-all
+```
+
+Modificación del package.json
+
+```javascript
+"validate" : "npm-run-all --parallel check-format format lint"
 ```
