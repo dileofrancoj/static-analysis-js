@@ -11,7 +11,7 @@ npm init -y
 ## Instalación de dependencias básicas.
 
 ```bash
-npm i @babel/cli @babel/core @babel/preset-env
+npm i -D @babel/cli @babel/core @babel/preset-env
 ```
 
 ## Creación de .babelrc
@@ -34,6 +34,8 @@ Babel es un "compilador" (o transpilador) para JavaScript. Básicamente permite 
   ]
 }
 ```
+
+Un preset es un conjunto de plugins, hay varios presets que los desarrolladores de Babel ofrecen y otros creados por la comunidad,
 
 ## Agregado de script en package.json
 
