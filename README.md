@@ -214,6 +214,7 @@ Para que tengas más información acerca de esta asombrosa herramienta te dejo s
 ```bash
 npm install husky --save-dev
 npx husky install
+npx husky-init
 npm set-script prepare "husky install"
 npx husky add .husky/pre-commit "npm run check-format"
 npx husky add .husky/pre-commit "npm run validate"
